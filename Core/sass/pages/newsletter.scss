@@ -1,0 +1,153 @@
+@import "bourbon";
+
+/* ABSTRACTS */
+@import
+	'../Abstracts/variables',
+	'../Abstracts/functions',
+   '../Abstracts/mixins';
+
+.newsletter {
+   .second-header {
+      position: relative;
+      background-color: $blue-sea;
+      box-shadow: 0 2px 11px rgba(0,0,0,.2);
+      height: 100%;
+      .wrapper-sec-head {
+         position: relative;
+         padding: 35px 0 10px;
+         width: 100%;
+         @include clearit;
+         @include breakpoint(mobile) {
+            padding: 20px 0 5px;
+         }
+         date {
+            display: inline-block;
+            font-family: roboto_medium;
+            font-size: 16px;
+            color: white;
+            @include breakpoint(mobile) {
+               font-size: 14px;
+            }
+         }
+         h1 {
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            font-family: archivo_bold;
+            font-size: 58.23px;
+            color: white;
+            @include breakpoint(mobile) {
+               position: static;
+               font-size: 40px;
+            }
+         }
+      }
+   }
+
+   .headline-nl {
+      padding: 30px 0;
+      background-color: #f2f2f2;
+      border-bottom: 8px solid #ddd;
+      @include clearit;
+      @include breakpoint(mobile) {
+         padding: 20px 0;
+      }
+      h2 {
+         font-family: roboto_light;
+         font-size: 34px;
+         margin-bottom: 35px;
+         line-height: 1.3;
+         a {
+            color: #333;
+         }
+         @include breakpoint(mobile) {
+            font-size: 28px;
+         }
+      }
+      article {
+         figure {
+            float: left;
+            margin-right: 20px;
+            @include breakpoint(mobile) {
+               width: 100%;
+               margin-bottom: 15px;
+            }
+            img {
+               width: 100%;
+            }
+         }
+         p {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            ~ a {
+               font-family: roboto_medium;
+               font-style: italic;
+               font-size: 18px;
+               color: $orange;
+            }
+         }
+      }
+   }
+   .nl-list {
+      padding: 15px 0 20px;
+      ul {
+         width: 100%;
+         margin-bottom: 20px;
+         li {
+            width: 100%;
+            padding: 20px 0;
+            display: inline-block;
+            border-bottom: 1px solid #ddd;
+            article {
+               figure {
+                  float: left;
+                  margin-right: 20px;
+                  @include breakpoint(mobile) {
+                     width: 130px;
+                     margin-bottom: 20px;
+                  }
+                  img {
+                     width: 100%;
+                  }
+               }
+               p {
+                  font-size: 18px;
+                  line-height: 1.4;
+                  margin-bottom: 10px;
+                  a {
+                     color: #333;
+                  }
+                  ~ a {
+                     font-family: roboto_medium;
+                     font-style: italic;
+                     font-size: 18px;
+                     color: $orange;
+                  }
+               }
+            }
+         }
+      }
+      a.btn {
+         padding: 14px;
+         margin: 0 auto;
+         display: block;
+         height: auto;
+         span {
+            font-size: 20px;
+         }
+         @include breakpoint(wide) {
+            width: 80%;
+         }
+         @include breakpoint(tablet) {
+            width: 100%;
+         }
+         @include breakpoint(mobile) {
+            width: 100%;
+            span {
+               font-size: 18px;
+            }
+         }
+      }
+   }
+}

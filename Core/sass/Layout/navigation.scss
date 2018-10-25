@@ -1,0 +1,41 @@
+.navigasi {
+    width: auto;
+    height: 100%;
+    @include clearit;
+    ul {
+        position: relative;
+        top: 20px;
+        float: right;
+        background: rgba(255,255,255,.7);
+        border-radius: 5px;
+        @include breakpoint(mobile) {
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            float: none;
+            display: inline-block;
+        }
+        li {
+            position: relative;
+            // text-align: center;
+            a {
+                position: relative;
+                padding: 10px 35px;
+                display: block;
+                font-family: "roboto_bold";
+                font-size: 18px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $hitam;
+                z-index: 2;
+                &:hover {
+                    border-radius: 5px;
+                    background: $orange;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+

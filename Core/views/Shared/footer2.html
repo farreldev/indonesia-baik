@@ -1,0 +1,31 @@
+      </main>
+      <!-- CONTAINER -->
+
+      <!-- FOOTER -->
+      <footer class="site-footer2">
+        <p>©2017 Katadata. All rights reserved.</p>
+        <strong>Mailing Address:</strong>
+        <p class="margin-bottom-15">Katadata.co.id <br/>Rukan Permata Senayan Blok D 31, Jl Tentara Pelajar<br/>
+          South Jakarta 12210<br/>Indonesia
+        </p>
+        <a href="" class="btn btn-orange margin-bottom-15">Add us to your address book</a>
+        <p>
+          Want to change how you receive these emails?<br/> You can <a href="">update your preferences</a> or <a href="">unsubscribe from this list.</a>
+        </p>
+      </footer>
+      <!-- FOOTER -->
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/js/vendor.min.js" ></script>
+    <script src="assets/js/plugins.min.js" ></script>
+    <script src="assets/js/app.min.js" ></script>
+    
+    @@if (context.script) {
+      @@for(var i=0;i<script.length;i++) {
+        <script src="`+script[i]+`" ></script>
+      }
+    }
+
+  </body>
+</html>

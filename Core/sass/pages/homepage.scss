@@ -1,0 +1,121 @@
+@import "bourbon";
+
+/* ABSTRACTS */
+@import
+	'../Abstracts/variables',
+	'../Abstracts/functions',
+	'../Abstracts/mixins';
+
+.homepage {
+	.big-hero {
+		position: relative;
+		width: 100%;
+		height: 540px;
+		background: url('../../images/hero-images/big-image1.jpg') no-repeat 50% 50%;
+		background-size: cover;
+		.banner-title {
+			position: relative;
+			top: 10px;
+			width: 40%;
+			z-index: 3;
+			padding: 15px 20px;
+			background: rgba(80, 132, 234, .85);
+			@include breakpoint(wide) {
+				width: 50%;
+			}
+			@include breakpoint(tablet) {
+				width: 52.7%;
+			}
+			@include breakpoint(mobile) {
+				top: 100px;
+				width: auto;
+			}
+			strong {
+				display: inline-block;
+				font-size: 15px;
+				margin-bottom: 10px;
+				letter-spacing: .6px;
+				text-transform: uppercase;
+				color: white;
+
+				@include breakpoint(mobile) {
+					font-size: 12px;
+				}
+			}
+			h1 {
+				letter-spacing: -1px;
+				text-shadow: 2px 0 12px rgba(0,0,0,.3);
+				@include breakpoint(mobile) {
+					font-size: 35px;
+				}
+			}
+			p {
+				font-family: roboto_light;
+				font-size: 16px;
+				color: white;
+				width: 100%;
+				margin: 0 auto;
+				line-height: 1.5;
+				@include breakpoint(mobile) {
+					font-size: 13px;
+				}
+			}
+		}
+		&:before {
+			position: absolute;
+			top: 0;
+			content: '';
+			display: inline-block;
+			width: 100%;
+			height: 10px;
+			background: rgba(80, 132, 234, .85);
+			z-index: 2;
+		}
+		&:after {
+			position: absolute;
+			top: 0;
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 540px;
+            background: rgba(0,0,0,.2);
+            z-index: 2;
+		}
+	}
+	.gridImages {
+		background: $biru_muda;
+		.listImg {
+			position: relative;
+			top: -50px;
+			@include clearit;
+			z-index: 2;
+			li {
+				@include ownGrid(3, 3%);
+				@include breakpoint(tablet) {
+					@include ownGrid(3, 2%);
+					margin-bottom: 40px;
+				}
+				@include breakpoint(mobile) {
+					@include ownGrid(1, 5%);
+					margin-bottom: 40px;
+				}
+				// min-height: 450px !important;
+				padding: 12px;
+				background: white;
+				box-shadow: 0 5px 17px rgba(0,0,0,.15);
+				a {
+					img {
+						margin-bottom: 10px;
+						width: 100%;
+					}
+				}
+				p {
+					line-height: 1.5;
+				}
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

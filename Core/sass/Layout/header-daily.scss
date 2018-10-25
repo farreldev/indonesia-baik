@@ -1,0 +1,35 @@
+.site-header-daily {
+    padding: 25px 0 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    color: white;
+    background-color: $biru-tua;
+    @include clearit;
+    @include breakpoint(mobile) {
+        text-align: center;
+        padding: 15px;
+    }
+    &.white {
+        background-color: white;
+        .nl-kd-logo ~ a {
+            color: #333;
+        }
+    }
+    .nl-kd-logo {
+        float: left;
+        vertical-align: middle;
+        width: 243px;
+        @include breakpoint(mobile) {
+            float: none;
+        }
+        ~ a {
+            font-family: roboto_regular;
+            font-size: 17px;
+            float: right;
+            padding: 15px 0 0;
+            display: block;
+            color: white;
+        }
+    }
+}

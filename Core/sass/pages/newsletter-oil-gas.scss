@@ -1,0 +1,285 @@
+@import "bourbon";
+
+/* ABSTRACTS */
+@import
+	'../Abstracts/variables',
+	'../Abstracts/functions',
+   '../Abstracts/mixins';
+
+.newsletter {
+   a.btn {
+      font-size: 18px;
+      strong {
+         font-family: roboto_medium;
+      }
+   }
+   &.oil-gas {
+      .second-header {
+         position: relative;
+         background-color: $biru-tua;
+         box-shadow: 0 2px 11px rgba(0,0,0,.2);
+         .wrapper-sec-head {
+            padding: 10px 0;
+            @include clearit;
+            @include breakpoint(mobile) {
+               padding: 20px 0 5px;
+            }
+            h1 {
+               padding: 0;
+               margin: 0 0 2px;
+               display: block;
+               font-family: roboto_light;
+               font-size: 45px;
+               color: $kuning;
+               @include breakpoint(mobile) {
+                  position: static;
+                  font-size: 28px;
+                  margin: 0 0 3px;
+               }
+               ~ a {
+                  margin-bottom: 5px;
+                  margin-left: 4px;
+                  display: block;
+                  font-family: roboto_regular;
+                  font-size: 14px;
+                  color: #75b4e5;
+               }
+            }
+            date {
+               position: absolute;
+               top: 50%;
+               right: 0;
+               transform: translateY(-50%);
+               padding: 5px 0 0;
+               display: inline-block;
+               // background-color: salmon;
+               font-family: roboto_regular;
+               font-size: 16px;
+               color: white;
+               @include breakpoint(mobile) {
+                  font-size: 14px;
+               }
+            }
+         }
+      }
+      .nl-oil-gas-content {
+         .greeting-nl {
+            border-bottom: 4px solid #ddd;
+            padding: 20px 0 15px;
+            margin-bottom: 20px;
+            strong {
+               display: block;
+               font-family: roboto_medium;
+               font-size: 16px;
+               margin-bottom: 10px;
+            }
+            p {
+               font-size: 16px;
+            }
+         }
+         .hl-nl-oil-gas {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+            article {
+               h2 {
+                  font-size: 34px;
+                  font-family: roboto_light;
+                  margin-bottom: 20px;
+                  line-height: 1.4;
+                  a {
+                     color: #333;
+                  }
+               }
+               figure {
+                  margin-bottom: 15px;
+                  width: 100%;
+                  img {
+                     width: 100%;
+                  }
+               }
+               p {
+                  font-size: 18px;
+                  line-height: 1.4;
+                  margin-bottom: 25px;
+               }
+            }
+         }
+         .oil-gas-list {
+            margin-bottom: 20px;
+            li {
+               margin-bottom: 15px;
+               padding-bottom: 25px;
+               border-bottom: 1px solid #ddd;
+               &:last-child {
+                  border-bottom: 0;
+               }
+               h3 {
+                  font-size: 26px;
+                  font-family: roboto_light;
+                  margin-bottom: 20px;
+                  text-transform: capitalize;
+                  line-height: 1.3;
+                  a {
+                     color: #333;
+                  }
+               }
+               p {
+                  font-size: 18px;
+                  line-height: 1.4;
+                  margin-bottom: 25px;
+               }
+            }
+         }
+         .nl-monitoring {
+            padding: 10px;
+            margin-bottom: 35px;
+            border-top: 5px solid #0072bc;
+            background-color: #d0f0fc;
+            ~ a.btn {
+               padding: 14px;
+               margin: 0 auto 35px;
+               display: block;
+               height: auto;
+               span {
+                  font-size: 20px;
+               }
+               @include breakpoint(wide) {
+                  width: 80%;
+               }
+               @include breakpoint(tablet) {
+                  width: 100%;
+               }
+               @include breakpoint(mobile) {
+                  width: 100%;
+                  span {
+                     font-size: 18px;
+                  }
+               }
+            }
+            strong {
+               font-family: roboto_regular;
+               font-style: bold;
+               font-size: 15px;
+               display: block;
+               text-transform: uppercase;
+               margin-bottom: 20px;
+            }
+            article {
+               border-bottom: 1px solid rgba(146, 207, 230, 1);
+               // border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+               margin-bottom: 20px;
+               &:last-child {
+                  margin-bottom: 0;
+                  border-bottom: none;
+               }
+               h3 {
+                  text-transform: capitalize;
+                  font-family: roboto_light;
+                  font-size: 26px;
+                  margin-bottom: 20px;
+                  line-height: 1.3;
+               }
+               p {
+                  font-size: 18px;
+                  line-height: 1.4;
+                  margin-bottom: 25px;
+               }
+            }
+         }
+      }
+   }
+
+   // .headline-nl {
+   //    padding: 30px 0;
+   //    background-color: #f2f2f2;
+   //    border-bottom: 8px solid #ddd;
+   //    @include clearit;
+   //    @include breakpoint(mobile) {
+   //       padding: 20px 0;
+   //    }
+   //    h2 {
+   //       font-family: roboto_light;
+   //       font-size: 34px;
+   //       margin-bottom: 35px;
+   //       @include breakpoint(mobile) {
+   //          font-size: 28px;
+   //       }
+   //    }
+   //    article {
+   //       figure {
+   //          float: left;
+   //          margin-right: 20px;
+   //          @include breakpoint(mobile) {
+   //             margin-bottom: 15px;
+   //          }
+   //       }
+   //       p {
+   //          font-size: 18px;
+   //          line-height: 1.5;
+   //          margin-bottom: 10px;
+   //          ~ a {
+   //             font-family: roboto_medium;
+   //             font-style: italic;
+   //             font-size: 18px;
+   //             color: $orange;
+   //          }
+   //       }
+   //    }
+   // }
+   // .nl-list {
+   //    padding: 15px 0 20px;
+   //    ul {
+   //       width: 100%;
+   //       margin-bottom: 20px;
+   //       li {
+   //          width: 100%;
+   //          padding: 20px 0;
+   //          display: inline-block;
+   //          border-bottom: 1px solid #ddd;
+   //          article {
+   //             figure {
+   //                float: left;
+   //                margin-right: 20px;
+   //                @include breakpoint(mobile) {
+   //                   width: 150px;
+   //                   margin-bottom: 20px;
+   //                }
+   //                img {
+   //                   width: 100%;
+   //                }
+   //             }
+   //             p {
+   //                font-size: 18px;
+   //                line-height: 1.5;
+   //                margin-bottom: 10px;
+   //                ~ a {
+   //                   font-family: roboto_medium;
+   //                   font-style: italic;
+   //                   font-size: 18px;
+   //                   color: $orange;
+   //                }
+   //             }
+   //          }
+   //       }
+   //    }
+   //    a.btn {
+   //       padding: 14px;
+   //       margin: 0 auto;
+   //       display: block;
+   //       height: auto;
+   //       span {
+   //          font-size: 20px;
+   //       }
+   //       @include breakpoint(wide) {
+   //          width: 80%;
+   //       }
+   //       @include breakpoint(tablet) {
+   //          width: 100%;
+   //       }
+   //       @include breakpoint(mobile) {
+   //          width: 100%;
+   //       }
+   //    }
+   // }
+}

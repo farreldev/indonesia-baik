@@ -1,0 +1,14 @@
+.main-wrapping {
+    width: 100%;
+    overflow: hidden;
+}
+.site-container2 {
+    margin-top: 72px;
+    width: 100%;
+    // padding: 20px 0;
+    min-height: calc(100% - 250px);
+    overflow: hidden;
+    @include breakpoint(mobile) {
+        margin-top: 66px;
+    }
+}
